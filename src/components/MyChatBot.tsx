@@ -1,6 +1,14 @@
 import { useState } from "react";
 import ChatBot from "react-chatbotify";
 import "./ChatBot.css";
+// import { apiService } from "../services/ApiService";
+
+// interface Mock {
+//   id: number;
+//   title: string;
+//   userId: number;
+//   completed: boolean;
+// }
 
 const MyChatBot = () => {
   const [form, setForm] = useState<any>({});
@@ -16,6 +24,8 @@ const MyChatBot = () => {
 
   const fetchData = async (params: any) => {
     try {
+      // const todos: any = await apiService.get<Mock>('https://jsonplaceholder.typicode.com/todos/1');
+      // return todos.title;
       const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
       const data = await response.json();
       return data.title;
@@ -50,7 +60,8 @@ const MyChatBot = () => {
       path: "ask_value_to_deposit",
     },
     ask_value_to_deposit: {
-      message: "Qual o valor que você consegue se comprometer em investir mensalmente?",
+      message:
+        "Durante esse período, qual o valor que você consegue se comprometer em investir mensalmente?",
       function: (params: any) => setForm({ ...form, valueToDeposit: params.userInput }),
       path: "show_prediction",
     },
@@ -58,6 +69,7 @@ const MyChatBot = () => {
       message:
         "Analisando as suas respostas, você poderia desembolsar cerca de 30% a mais do que você investiu ao fim do período escolhido!",
       transition: { duration: 500 },
+      chatDisabled: true,
       path: "show_awesome",
     },
     show_awesome: {
@@ -73,12 +85,12 @@ const MyChatBot = () => {
       path: "end",
     },
     end: {
-      message: async (params: any) => {
-        const result = await fetchData(params);
-        return result;
-      },
-      //   message:
-      //     "Para ter acesso à esse plano de aposentadoria com as melhores taxa do mercado, crie a sua conta e siga as instruções! Te vejo lá!",
+      // message: async (params: any) => {
+      //   const result = await fetchData(params);
+      //   return result;
+      // },
+      message:
+        "Para ter acesso à esse plano de aposentadoria com as melhores taxas do mercado, crie a sua conta e siga as instruções! Te vejo lá!",
       component: (
         <div style={formStyle}>
           <p>Nome: {form.name}</p>
@@ -100,9 +112,10 @@ const MyChatBot = () => {
         chatHistory: { disabled: true },
         header: { title: "Cleiton" },
         chatWindow: { showScrollbar: true },
-        audio: { disabled: false, defaultToggledOn: true },
-        chatInput: { botDelay: 2500, blockSpam: true, enabledPlaceholderText: "Escreva aqui" },
+        notification: { disabled: true },
+        chatInput: { botDelay: 2000, blockSpam: true, enabledPlaceholderText: "Escreva aqui" },
         botBubble: { simStream: true, streamSpeed: 80 },
+        // audio: { disabled: false, defaultToggledOn: true },
       }}
     />
   );

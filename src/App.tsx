@@ -1,9 +1,8 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import MyChatBot from "./components/MyChatBot";
-
 
 const App = () => {
-  return <MyChatBot />;
+  return <Outlet />;
 };
 
 export default App;
