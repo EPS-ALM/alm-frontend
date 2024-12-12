@@ -1,0 +1,110 @@
+.container {
+  background-color: #2d3a3a;
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  padding: 5rem 2rem 3rem;
+}
+
+.container:nth-child(2) {
+  padding: 5rem 2rem 0;
+}
+
+.container:nth-child(3) {
+  background-color: #ffffff;
+  color: #040f0f;
+}
+
+.container:nth-child(4) {
+  background-color: #040f0f;
+  color: #ffffff;
+}
+
+.container h2 {
+  font-weight: bold;
+}
+
+.mainButton {
+  padding: 1rem 3rem;
+  color: #040f0f;
+  font-weight: bold;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.mainButton:hover {
+  color: #040f0f;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  transform: scale(1.1);
+}
+
+.mainButton:active {
+  color: #ffffff !important;
+  background-color: #040f0f !important;
+  border-color: #040f0f !important;
+}
+
+.arrow {
+  width: 100%;
+  position: relative;
+  bottom: 7rem;
+  z-index: 0;
+}
+
+.rectangleArea {
+  position: relative;
+  bottom: 5rem;
+}
+
+.retangle {
+  border: 1px solid #ffffff;
+  padding: 3rem 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: transparent;
+  transition: all 0.5s;
+  cursor: default;
+}
+
+.retangle:hover {
+  color: #040f0f;
+  background-color: #ffffff;
+}
+
+.retangleCard {
+  border: none;
+  padding: 2rem;
+  color: #ffffff;
+  background-color: #040f0f;
+  transition: all 0.5s;
+  cursor: default;
+  min-height: 17rem;
+  height: 100%;
+  text-align: left;
+}
+
+.retangleCard .card-body {
+  text-align: left !important;
+}
+
+.retangleCard:hover {
+  transform: scale(1.05);
+}
+
+.customAccordion,
+.accordionItem {
+  background-color: transparent;
+  color: #ffffff;
+  text-align: left;
+}
+
+.footer {
+    margin-top: 7rem;
+}
+
+.footer p {
+  color: #8e9195;
+}

@@ -1,0 +1,16 @@
+.mainButton {
+  color: #040f0f;
+  font-weight: bold;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  transition: all 0.3s;
+  z-index: 1;
+  float: right;
+}
+
+.mainButton:hover {
+  color: #040f0f;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  transform: scale(1.05);
+}

@@ -1,0 +1,22 @@
+* {
+  scroll-behavior: smooth;
+}
+
+.accordion-button {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+.accordion-header {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.accordion-body {
+    color: #8E9195;
+}
