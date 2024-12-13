@@ -10,7 +10,7 @@ import SimulationPage from "./pages/SimulationPage.tsx";
 import ErrorPage from "./pages/ErrorPage.tsx";
 import HomePage from "./pages/HomePage/HomePage.tsx";
 import AdminRoute from "./services/AdminRoute.tsx";
-import AdminPage from "./pages/AdminPage.tsx";
+import AdminPage from "./pages/AdminPage/AdminPage.tsx";
 import LoginPage from "./pages/LoginPage.tsx";
 
 const router = createBrowserRouter([

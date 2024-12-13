@@ -14,3 +14,11 @@
   border-color: #ffffff;
   transform: scale(1.05);
 }
+
+.secondaryButton {
+  transition: all 0.3s;
+}
+
+.secondaryButton:hover {
+  transform: scale(1.05);
+}

@@ -150,9 +150,8 @@ const HomePage = () => {
           <Col>
             <h3 className="mb-4">Informações</h3>
 
-            <p>Contato</p>
-            <p>Termos e condições</p>
-            <p>Política de privacidade</p>
+            <p style={{ cursor: "pointer" }}>Termos e condições</p>
+            <p style={{ cursor: "pointer" }}>Política de privacidade</p>
           </Col>
         </Row>
       </Container>
