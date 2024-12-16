@@ -1,14 +1,6 @@
 import { useState } from "react";
 import ChatBot from "react-chatbotify";
 import "./ChatBot.css";
-// import { apiService } from "../services/ApiService";
-
-// interface Mock {
-//   id: number;
-//   title: string;
-//   userId: number;
-//   completed: boolean;
-// }
 
 const MyChatBot = () => {
   const [form, setForm] = useState<any>({});
@@ -20,18 +12,6 @@ const MyChatBot = () => {
     padding: 10,
     borderRadius: 5,
     maxWidth: 300,
-  };
-
-  const fetchData = async (params: any) => {
-    try {
-      // const todos: any = await apiService.get<Mock>('https://jsonplaceholder.typicode.com/todos/1');
-      // return todos.title;
-      const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-      const data = await response.json();
-      return data.title;
-    } catch (error) {
-      return "Oh no I don't know what to say!";
-    }
   };
 
   const flow = {
