@@ -1,6 +1,11 @@
 import { Accordion, Button, Card, Col, Container, Row } from "react-bootstrap";
 import styles from "./HomePage.module.css";
 import { useNavigate } from "react-router-dom";
+import arrow from "../../assets/arrow.png";
+import instagram from "../../assets/instagram.png";
+import youtube from "../../assets/youtube.png";
+import facebook from "../../assets/facebook.png";
+import logo from "../../assets/logo.png";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -29,7 +34,7 @@ const HomePage = () => {
           </div>
         </Row>
 
-        <img className={styles.arrow} src="src/assets/arrow.png" />
+        <img className={styles.arrow} src={arrow} />
         <Row className={`${styles.rectangleArea} justify-content-center gap-3`}>
           <Col>
             <Card className={`${styles.retangle} text-center`}>Simplicidade</Card>
@@ -124,16 +129,16 @@ const HomePage = () => {
 
         <Row className={`${styles.footer}`}>
           <Col>
-            <img src="/src/assets/logo.png" />
+            <img src={logo} />
             <div className="d-flex gap-4 mt-3 mb-3">
               <a href="https://instagram.com" target="_blank">
-                <img src="/src/assets/instagram.png" />
+                <img src={instagram} />
               </a>
               <a href="https://youtube.com" target="_blank">
-                <img src="/src/assets/youtube.png" />
+                <img src={youtube} />
               </a>
               <a href="https://facebook.com" target="_blank">
-                <img src="/src/assets/facebook.png" />
+                <img src={facebook} />
               </a>
             </div>
             <p>ALM ChatBot © alguns direitos reservados.</p>

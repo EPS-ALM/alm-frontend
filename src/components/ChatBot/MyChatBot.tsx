@@ -94,7 +94,7 @@ const MyChatBot = () => {
         chatWindow: { showScrollbar: true },
         notification: { disabled: true },
         chatInput: { botDelay: 2000, blockSpam: true, enabledPlaceholderText: "Escreva aqui" },
-        botBubble: { simStream: true, streamSpeed: 80 },
+        botBubble: { simStream: true, streamSpeed: 60 },
         // audio: { disabled: false, defaultToggledOn: true },
       }}
     />

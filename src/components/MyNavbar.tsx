@@ -1,6 +1,7 @@
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./MyNavbar.module.css";
+import logo from "../assets/logo.png";
 
 const MyNavbar = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const MyNavbar = () => {
         <Container fluid>
           {/* Logo à esquerda */}
           <Navbar.Brand href="/">
-            <img src="/src/assets/logo.png" style={{ height: "4rem" }} alt="Logo" />
+            <img src={logo} style={{ height: "4rem" }} alt="Logo" />
           </Navbar.Brand>
 
           {/* Botão toggle para telas pequenas */}
