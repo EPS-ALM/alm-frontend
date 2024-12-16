@@ -1,4 +1,4 @@
-const apiUrl = import.meta.env.VITE_API_URL;
+export const apiUrl = import.meta.env.VITE_API_URL;
 
 class ApiService {
   private baseUrl: string;
@@ -28,6 +28,19 @@ class ApiService {
       }
 
       return (await response.json()) as T;
+    } catch (error: any) {
+      throw new Error(error);
+    }
+  }
+
+  async getHTML(endpoint: string): Promise<string> {
+    try {
+      const url = `${this.baseUrl}${endpoint}`;
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw { status: response.status, message: response.statusText };
+      }
+      return await response.text(); // Obtém o HTML como texto
     } catch (error: any) {
       throw new Error(error);
     }
