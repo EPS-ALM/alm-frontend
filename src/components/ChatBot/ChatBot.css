@@ -2,3 +2,7 @@
   position: relative;
   bottom: 5px;
 }
+
+.rcb-chat-window {
+  width: 100%;
+}

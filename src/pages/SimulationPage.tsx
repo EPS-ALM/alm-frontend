@@ -4,7 +4,15 @@ import MyChatBot from "../components/ChatBot/MyChatBot";
 const SimulationPage = () => {
   return (
     <>
-      <Container style={{ marginTop: "7rem" }} className='w-100 d-flex justify-content-center' fluid>
+      <Container
+        style={{
+          paddingTop: "10rem",
+          height: "100vh",
+          backgroundColor: "#2d3a3a",
+        }}
+        className="w-100 d-flex justify-content-center"
+        fluid
+      >
         <MyChatBot />
       </Container>
     </>

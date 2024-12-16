@@ -94,10 +94,10 @@ const HomePage = () => {
             <Accordion.Item className={styles.accordionItem} eventKey="0">
               <Accordion.Header>Qual é a rentabilidade prometida?</Accordion.Header>
               <Accordion.Body>
-                Nossa plataforma não promete rentabilidade fixa. No entanto, com base no perfil de
-                risco e nos objetivos financeiros do usuário, buscamos oferecer o melhor retorno
-                possível para cada cenário. É importante lembrar que os investimentos estão sujeitos
-                a riscos e variáveis do mercado.
+                Nossa plataforma promete uma rentabilidade fixa de 0.9% por mês nos primeiros 3
+                anos. A cada 3 anos conosco, a rentabilidade sobre 0.1%! Buscamos oferecer o melhor
+                retorno possível apesar das circunstâncias de mercado. Mas é importante lembrar que
+                os investimentos estão sujeitos a riscos e variáveis do mercado.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item className={styles.accordionItem} eventKey="1">
@@ -111,17 +111,17 @@ const HomePage = () => {
             <Accordion.Item className={styles.accordionItem} eventKey="2">
               <Accordion.Header>A plataforma cobra alguma taxa de administração?</Accordion.Header>
               <Accordion.Body>
-                Sim, nossa plataforma cobra uma taxa de administração competitiva para a gestão dos
-                seus investimentos. Essa taxa é transparente e será detalhada durante a contratação
-                do serviço.
+                Não! A nossa plataforma não cobra uma taxa de administração. Ao invés disso, nós
+                lucramos com a rentabilidade global dos investidores, isso significa que nos
+                beneficiamos quando todos estão se beneficiando!
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item className={styles.accordionItem} eventKey="3">
               <Accordion.Header>Como posso obter suporte, caso necessário?</Accordion.Header>
               <Accordion.Body>
-                Nosso suporte está disponível 24/7 por meio do chatbot integrado na plataforma. Caso
-                necessite de atendimento humano, é possível abrir um chamado diretamente no
-                aplicativo, e um especialista entrará em contato o mais rápido possível.
+                O nosso bot está disponível 24/7 por meio da plataforma, entretanto, caso necessite
+                de atendimento humano, é possível entrar em contato por email ou telefone, e um
+                especialista entrará em contato o mais rápido possível.
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>

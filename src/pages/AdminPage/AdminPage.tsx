@@ -34,24 +34,34 @@ const AdminPage = () => {
 
       <Row className="mt-5">
         <h3>Índice Sharpe</h3>
-        {wallet?.plotBase64 && <img src={"data:image/png;base64," + wallet?.plotBase64} />}
+        {wallet?.plotBase64 && (
+          <img style={{ width: "60%" }} src={"data:image/png;base64," + wallet?.plotBase64} />
+        )}
       </Row>
 
       <Row className="mt-5">
         <h3>Valor do Fundo</h3>
 
-        <p>Investido: R$ {cashValue?.invested}</p>
-        <p>Em caixa: R$ {cashValue?.inCash}</p>
+        <p>
+          Investido:{" "}
+          {cashValue?.invested?.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
+        </p>
+        <p>
+          Em caixa:{" "}
+          {cashValue?.inCash?.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
+        </p>
       </Row>
 
-      <Row className="mt-3" style={{ backgroundColor: "#FFFFFF" }}>
-        <h3>Passivos</h3>
+      <h3 className="mt-4">Passivos</h3>
 
-        <iframe
-          src={`${apiUrl}/passivos`}
-          title="Passivos"
-          style={{ width: "100%", height: "135vh", border: "none" }}
-        />
+      <Row className="mt-3">
+        <div style={{ backgroundColor: "#FFFFFF" }}>
+          <iframe
+            src={`${apiUrl}/passivos`}
+            title="Passivos"
+            style={{ width: "100%", height: "90vh", border: "none" }}
+          />
+        </div>
       </Row>
     </Container>
   );
