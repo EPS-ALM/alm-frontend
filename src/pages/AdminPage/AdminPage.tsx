@@ -30,13 +30,14 @@ const AdminPage = () => {
         setCashValue(res);
       });
 
-      RISKS_REPORTS.map(async (report) => {
-        apiService.get<any>(`/riskNotebook?notebookName=${report}`).then((res) => {
-          const reports = [...riskReports];
-          reports.push(res.notebook_html);
-          setRiskReports(reports);
-        });
-      });
+      const reports = await Promise.all(
+        RISKS_REPORTS.map(async (report) => {
+          const res = await apiService.get<any>(`/riskNotebook?notebookName=${report}`);
+          return res.notebook_html;
+        })
+      );
+
+      setRiskReports(reports);
     };
 
     getData();
@@ -77,7 +78,7 @@ const AdminPage = () => {
           />
         </div>
       </Row>
-      <h3 className="mt-4">Relatórios de Risco</h3>
+      <h3 className="mt-5">Relatórios de Risco</h3>
 
       {riskReports?.map((report: any, index: number) => {
         return (
