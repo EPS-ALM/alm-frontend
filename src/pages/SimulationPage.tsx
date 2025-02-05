@@ -6,8 +6,9 @@ const SimulationPage = () => {
     <>
       <Container
         style={{
-          paddingTop: "10rem",
-          height: "100vh",
+          paddingTop: "8rem",
+          paddingBottom: "2rem",
+          height: "100%",
           backgroundColor: "#2d3a3a",
         }}
         className="w-100 d-flex justify-content-center"
