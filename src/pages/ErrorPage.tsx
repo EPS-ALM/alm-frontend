@@ -5,8 +5,8 @@ const ErrorPage = () => {
   return (
     <Container className="d-flex flex-column mt-5 justify-content-center align-items-center">
       <div className="text-center">
-        <h1 style={{ fontSize: "6rem", color: "#FF6347" }}>Oops!</h1>
-        <h2 style={{ color: "#555", fontSize: "2rem" }}>
+        <h1 style={{ fontSize: "6rem", color: "#FF6347" }}>Recurso não encontrado</h1>
+        {/* <h2 style={{ color: "#555", fontSize: "2rem" }}>
           A página que você procurou não foi encontrada!
         </h2>
         <img
@@ -20,7 +20,7 @@ const ErrorPage = () => {
               Voltar para a Página Inicial
             </Button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </Container>
   );
