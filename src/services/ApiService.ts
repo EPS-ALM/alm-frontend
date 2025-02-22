@@ -1,3 +1,7 @@
+import axios, { AxiosResponse } from 'axios';
+
+import { ForecastRequest } from './interfaces';
+
 export const apiUrl = import.meta.env.VITE_API_URL;
 
 class ApiService {
@@ -12,7 +16,10 @@ class ApiService {
    * @param endpoint O endpoint relativo (exemplo: `/dados`).
    * @param params Parâmetros de consulta (opcional).
    */
-  async get<T>(endpoint: string, params?: Record<string, string | number>): Promise<T> {
+  async get<T>(
+    endpoint: string,
+    params?: Record<string, string | number>
+  ): Promise<T> {
     try {
       const url = new URL(`${this.baseUrl}${endpoint}`);
       if (params) {
@@ -43,6 +50,21 @@ class ApiService {
       return await response.text(); // Obtém o HTML como texto
     } catch (error: any) {
       throw new Error(error);
+    }
+  }
+
+  async forecast<T>(type: string, data: ForecastRequest): Promise<T> {
+    try {
+      const response: AxiosResponse<T> = await axios.post(
+        `${this.baseUrl}/forecast/${type}`,
+        data
+      );
+      return response.data;
+    } catch (error: unknown) {
+      if (axios.isAxiosError(error)) {
+        throw new Error(error.response?.data?.detail || error.message);
+      }
+      throw error;
     }
   }
 }

@@ -6,3 +6,16 @@
   width: 100%;
   padding: 3rem 2rem 3rem;
 }
+
+.forecastTable {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.table {
+  font-size: 0.9rem;
+}
+
+.metricsTable {
+  min-width: 300px;
+}
